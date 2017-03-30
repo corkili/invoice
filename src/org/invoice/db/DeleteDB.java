@@ -11,7 +11,29 @@ import org.invoice.service.DBManager;
  * @version v0.1
  */
 class DeleteDB implements DBManager{
-
+	
+	/**
+	 * 私有构造方法
+	 */
+	private DeleteDB(){
+		
+	}
+	
+	/**
+	 * 维护单例的工厂类
+	 * @author ran
+	 */
+	private static class DeleteDBFactory {
+		private static DeleteDB instance = new DeleteDB();
+	}
+	/**
+	 * 获取单例对象
+	 * @return DeleteDB类的单例对象
+	 */
+	public static DeleteDB getInstance() {
+		return DeleteDBFactory.instance;
+	}
+	
 	@Override
 	public Map<String, Object> operate(String sql) {
 		// TODO Auto-generated method stub

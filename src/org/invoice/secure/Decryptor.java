@@ -12,7 +12,6 @@ import org.invoice.service.Secure;
  * @version v0.1
  */
 class Decryptor implements Secure {
-
 	@Override
 	public Map<String, Object> handle(String content, String key) {
 		// TODO Auto-generated method stub

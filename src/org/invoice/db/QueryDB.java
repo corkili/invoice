@@ -11,6 +11,27 @@ import org.invoice.service.DBManager;
  * @version v0.1
  */
 class QueryDB implements DBManager{
+	
+	/**
+	 * 私有构造方法
+	 */
+	private QueryDB(){
+		
+	}
+	
+	/**
+	 * 
+	 * @author ran
+	 *
+	 */
+	private static class QueryDBFactory {
+		private static QueryDB instance = new QueryDB();
+	}
+	
+	public static QueryDB getInstance() {
+		return QueryDBFactory.instance;
+	}
+	
 	@Override
 	public Map<String, Object> operate(String sql) {
 		// TODO Auto-generated method stub
