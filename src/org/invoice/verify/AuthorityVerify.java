@@ -11,6 +11,10 @@ import org.invoice.service.Verification;
  * @version v0.1
  */
 class AuthorityVerify implements Verification {
+	private int authority;
+	public AuthorityVerify(int authority) {
+		this.authority = authority;
+	}
 	@Override
 	public <E> Map<String, Object> verify(E entity) {
 		// TODO Auto-generated method stub

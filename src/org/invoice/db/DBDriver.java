@@ -7,13 +7,14 @@ package org.invoice.db;
  * @version v0.1
  */
 public class DBDriver {
+	/** 数据库基本信息 */
 	private DBInfo dbInfo;
 	
 	/**
 	 * 私有构造方法
 	 */
 	private DBDriver(){
-		dbInfo = new DBInfo();
+		setDbInfo(new DBInfo());
 	}
 	
 	/**
@@ -62,5 +63,13 @@ public class DBDriver {
 	 */
 	public UpdateDB getUpdate() {
 		return UpdateDB.getInstance();
+	}
+
+	public DBInfo getDbInfo() {
+		return dbInfo;
+	}
+
+	public void setDbInfo(DBInfo dbInfo) {
+		this.dbInfo = dbInfo;
 	}
 }

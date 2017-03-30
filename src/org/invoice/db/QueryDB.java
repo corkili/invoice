@@ -20,14 +20,16 @@ class QueryDB implements DBManager{
 	}
 	
 	/**
-	 * 
+	 * 维护单例对象的工厂类
 	 * @author ran
-	 *
 	 */
 	private static class QueryDBFactory {
 		private static QueryDB instance = new QueryDB();
 	}
-	
+	/**
+	 * 获取数据库记录查询类的实例对象
+	 * @return QueryDB的实例对象
+	 */
 	public static QueryDB getInstance() {
 		return QueryDBFactory.instance;
 	}

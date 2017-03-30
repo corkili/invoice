@@ -10,7 +10,7 @@ import org.invoice.service.Verification;
  * @date 2017/3/26
  * @version v0.1
  */
-class SigninVerify implements Verification{
+class SignupVerify implements Verification{
 	@Override
 	public <E> Map<String, Object> verify(E entity) {
 		// TODO Auto-generated method stub
